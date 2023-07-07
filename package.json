@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vanilla-extract/css": "^1.12.0",
+    "@vanilla-extract/recipes": "^0.4.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "framer-motion": "^10.12.17",
     "next": "13.4.7",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.14",
+    "@vanilla-extract/next-plugin": "^2.1.3"
   }
 }
