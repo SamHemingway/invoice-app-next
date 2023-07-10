@@ -1,7 +1,9 @@
 import { League_Spartan } from "next/font/google";
-import "../styles/reset.css.ts";
-import "../styles/global.css.ts";
+import "@/styles/reset.css.ts";
+import "@/styles/global.css.ts";
 import ThemeProvider from "@/contexts/ThemeProvider";
+import Header from "@/app/components/Header/Header";
+import { mainWrapper, layout } from "./page.css";
 
 const leagueSpartan = League_Spartan({ subsets: ["latin"] });
 
@@ -17,7 +19,12 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body className={leagueSpartan.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <div className={layout}>
+            <Header />
+            <main className={mainWrapper}>{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

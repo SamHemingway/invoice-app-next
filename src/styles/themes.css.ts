@@ -115,6 +115,9 @@ export const themeVars = createThemeContract({
       subheading: "",
       secondary: "",
     },
+    input: {
+      background: "",
+    },
     focus: "",
   },
 });
@@ -166,6 +169,9 @@ export const darkTheme = createTheme(themeVars, {
       subheading: global.colour.primary[400],
       secondary: global.colour.mono[500],
     },
+    input: {
+      background: global.colour.primary[900],
+    },
     focus: global.colour.primary[400],
   },
 });
@@ -216,6 +222,9 @@ export const lightTheme = createTheme(themeVars, {
       heading: global.colour.mono[800],
       subheading: global.colour.mono[600],
       secondary: global.colour.mono[600],
+    },
+    input: {
+      background: global.colour.mono[400],
     },
     focus: global.colour.primary[400],
   },
