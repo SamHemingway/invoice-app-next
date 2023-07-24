@@ -15,8 +15,6 @@ function DatePicker({ label, onChange, selected, ...delegated }) {
     defaultSelected: new Date(selected),
   });
 
-  console.log(delegated);
-
   const pickerTrigger = (
     <TextInput
       label={label}
@@ -27,10 +25,7 @@ function DatePicker({ label, onChange, selected, ...delegated }) {
   );
 
   return (
-    <Popover
-      trigger={pickerTrigger}
-      label="Choose a date"
-    >
+    <Popover trigger={pickerTrigger} label="Choose a date">
       <DayPicker
         {...delegated}
         mode="single"
