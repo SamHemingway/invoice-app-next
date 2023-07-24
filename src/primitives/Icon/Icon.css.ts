@@ -4,6 +4,7 @@ export const wrapper = style({
   blockSize: "var(--size)",
   inlineSize: "var(--size)",
   cursor: "pointer",
+  color: "var(--colour, white)",
 
   selectors: {
     "&:focus": {
@@ -15,8 +16,4 @@ export const wrapper = style({
 globalStyle(`${wrapper} & > svg`, {
   display: "block",
   strokeWidth: "var(--stroke-width)",
-});
-
-globalStyle(`${wrapper} & > svg > path`, {
-  stroke: "white",
 });

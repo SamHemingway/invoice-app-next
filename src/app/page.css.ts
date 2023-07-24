@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { themeVars, vars } from "@/styles/themes.css";
+import { vars } from "@/styles/themes.css";
 import linearInterpolation from "@/helpers/linearInterpolation";
 
 export const mainWrapper = style({
@@ -13,6 +13,8 @@ export const mainWrapper = style({
     "screen and (min-width: 900px)": {
       marginInline: "auto",
       inlineSize: "45.625rem",
+      // add this padding to account for fixed left sidebar
+      paddingInlineStart: "6.25rem",
     },
   },
 });

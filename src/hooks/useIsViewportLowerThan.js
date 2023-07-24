@@ -1,15 +1,15 @@
 import React from "react";
 
-export default function useIsMobileViewport() {
+export default function useIsViewportLowerThan(pixel) {
   const [isMobile, setIsMobile] = React.useState(true);
 
   React.useEffect(() => {
     if (!window) setIsMobile(true);
 
     function handleResize() {
-      if (window.innerWidth > 900) {
+      if (window.innerWidth > pixel) {
         setIsMobile(false);
-      } else if (window.innerWidth <= 900) {
+      } else if (window.innerWidth <= pixel) {
         setIsMobile(true);
       }
     }
@@ -19,7 +19,7 @@ export default function useIsMobileViewport() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [pixel]);
 
   return isMobile;
 }

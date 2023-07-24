@@ -3,7 +3,7 @@
  * @param {number} minPixelSize - The minimum pixel size you want to scale from.
  * @param {number} maxPixelSize - The maximum pixel size you want to scale to.
  * @param {number} [minVp=375] - The view port size in pixels you want to start scaling from.
- * @param {number} [maxVp=768] - The view port size in pixels you want to stop scaling at.
+ * @param {number} [maxVp=900] - The view port size in pixels you want to stop scaling at.
  * @returns {string} A clamp CSS function.
  */
 

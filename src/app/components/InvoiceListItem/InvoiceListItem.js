@@ -4,16 +4,14 @@ import internationaliseCurrency from "@/helpers/internationaliseCurrency.js";
 import internationaliseDate from "@/helpers/internationaliseDate.js";
 import {
   wrapper,
-  invoiceNumber,
   clientName,
   dueDate,
   amountDue,
-  statusWrapper,
-  statusCircle,
-  statusCircleWrapper,
   linkWrapper,
 } from "./InvoiceListItem.css.ts";
 import Link from "next/link.js";
+import InvoiceStatus from "../InvoiceStatus";
+import InvoiceNumber from "../InvoiceNumber";
 
 function InvoiceListItem({ data }) {
   const totalDue = internationaliseCurrency(data.total);
@@ -28,7 +26,7 @@ function InvoiceListItem({ data }) {
         key={data.id}
         className={wrapper}
       >
-        <h3 className={invoiceNumber}>{data.id}</h3>
+        <InvoiceNumber as="h3">{data.id}</InvoiceNumber>
         <p className={clientName}>{data.clientName}</p>
 
         <p className={dueDate}>Due {date}</p>
@@ -43,25 +41,5 @@ function InvoiceListItem({ data }) {
 InvoiceListItem.propTypes = {
   data: PropTypes.object.isRequired,
 };
-
-function InvoiceStatus({ status }) {
-  return (
-    <div className={statusWrapper({ status })}>
-      <svg
-        viewBox="0 0 10 10"
-        xmlns="http://www.w3.org/2000/svg"
-        className={statusCircleWrapper}
-      >
-        <circle
-          className={statusCircle}
-          cx="5"
-          cy="5"
-          r="5"
-        />
-      </svg>
-      {status}
-    </div>
-  );
-}
 
 export default InvoiceListItem;

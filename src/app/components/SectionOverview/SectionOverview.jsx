@@ -8,11 +8,11 @@ import {
 } from "./SectionOverview.css.ts";
 import DropdownButton from "@/app/components/DropdownButton";
 import Button from "@/primitives/Button/Button";
-import useIsMobileViewport from "@/hooks/useIsMobileViewport.js";
+import useIsViewportLowerThan from "@/hooks/useIsViewportLowerThan.js";
 import FilterOptions from "@/app/components/FilterOptions";
 
 function SectionOverview() {
-  const mobileViewport = useIsMobileViewport();
+  const mobileViewport = useIsViewportLowerThan(900);
 
   return (
     <section className={wrapper}>

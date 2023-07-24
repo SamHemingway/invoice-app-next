@@ -1,5 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
-import { vars, themeVars } from "@/styles/themes.css";
+import { vars, themeVars } from "@/styles/themes.css.ts";
 
 const slideUp = keyframes({
   "0%": {

@@ -10,6 +10,7 @@ const global = createGlobalTheme("html", {
     primary: {
       300: "hsla(252, 100%, 73%, 1)",
       400: "hsla(252, 94%, 67%, 1)",
+      500: "hsla(231, 36%, 63%, 1)",
       700: "hsla(233, 30%, 21%, 1)",
       800: "hsla(233, 31%, 17%, 1)",
       900: "hsla(233, 30%, 11%, 1)",
@@ -65,6 +66,9 @@ const global = createGlobalTheme("html", {
     xs: "6px",
     s: "8px",
     l: "24px",
+  },
+  shadow: {
+    m: "0px 10px 10px -10px rgba(72, 84, 159, 0.10)",
   },
 });
 
@@ -143,10 +147,10 @@ export const darkTheme = createTheme(themeVars, {
         },
       },
       subdued: {
-        text: global.colour.mono[500],
-        background: global.colour.primary[800],
+        text: global.colour.mono[100],
+        background: global.colour.primary[700],
         hover: {
-          background: global.colour.primary[700],
+          background: global.colour.mono[800],
           text: global.colour.mono[900],
         },
       },
@@ -197,8 +201,8 @@ export const lightTheme = createTheme(themeVars, {
         },
       },
       subdued: {
-        text: global.colour.mono[900],
-        background: global.colour.primary[700],
+        text: global.colour.primary[500],
+        background: global.colour.mono[300],
         hover: {
           background: global.colour.mono[400],
           text: global.colour.mono[900],
@@ -221,7 +225,7 @@ export const lightTheme = createTheme(themeVars, {
       body: global.colour.mono[800],
       heading: global.colour.mono[800],
       subheading: global.colour.mono[600],
-      secondary: global.colour.mono[600],
+      secondary: global.colour.primary[500],
     },
     input: {
       background: global.colour.mono[400],
