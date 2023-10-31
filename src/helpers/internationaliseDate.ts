@@ -1,7 +1,7 @@
 export default function internationaliseDate(
-  date,
-  style = "short",
-  intlCode = "en-GB"
+  date: string,
+  style: string = "short",
+  intlCode: string = "en-GB"
 ) {
   const dateObj = new Date(date);
 

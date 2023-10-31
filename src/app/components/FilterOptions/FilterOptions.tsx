@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import PropTypes from "prop-types";
 import {
   input,
   optionWrapper,
@@ -50,7 +49,5 @@ function FilterOptions() {
     </form>
   );
 }
-
-FilterOptions.propTypes = {};
 
 export default FilterOptions;

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { wrapper } from "./InvoiceList.css.ts";
 import data from "@/assets/data.json";
-import InvoiceListItem from "../InvoiceListItem/InvoiceListItem.js";
+import InvoiceListItem from "../InvoiceListItem";
 
 function InvoiceList() {
   return (

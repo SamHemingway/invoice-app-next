@@ -1,8 +1,17 @@
 import React from "react";
 import { button } from "./Button.css.ts";
 
-import IconCircle from "../IconCircle";
-import { ICONS } from "@/assets/ICONS.jsx";
+import IconCircle from "../IconCircle/index.tsx";
+import { ICONS, IconsTypes } from "@/assets/ICONS.tsx";
+
+type ButtonTypes = {
+  variant?: "fill" | "ghost";
+  state?: "primary" | "secondary" | "danger";
+  icon: IconsTypes;
+  iconLocation?: "left" | "right";
+  roundIcon?: boolean;
+  children: JSX.Element;
+};
 
 function Button({
   variant = "fill",
@@ -12,10 +21,13 @@ function Button({
   roundIcon,
   children,
   ...delegated
-}) {
+}: ButtonTypes) {
   const IconEl = ICONS[icon];
 
-  function buildIconStyle(location, isRound) {
+  function buildIconStyle(
+    location: "left" | "right" | undefined,
+    isRound: boolean | undefined
+  ) {
     if (location === "left") {
       return isRound ? "leftRound" : "left";
     }

@@ -9,12 +9,11 @@ import {
 
 import { Formik, Form } from "formik";
 import NavLink from "../components/NavLink";
-import getInvoice from "@/helpers/getInvoice.js";
+import getInvoice from "@/helpers/getInvoice.ts";
 import InvoiceNumber from "@/app/components/InvoiceNumber/";
 import TextInput from "@/primitives/TextInput";
 import React from "react";
 import DatePicker from "@/primitives/DatePicker";
-import internationaliseDate from "@/helpers/internationaliseDate.js";
 
 export default function Page({ params }) {
   const invoice = getInvoice(params.invoiceID);

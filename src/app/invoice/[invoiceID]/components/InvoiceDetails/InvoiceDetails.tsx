@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import internationaliseDate from "@/helpers/internationaliseDate.js";
+import internationaliseDate from "@/helpers/internationaliseDate.ts";
 import LineItems from "../LineItems";
 import InvoiceNumber from "@/app/components/InvoiceNumber";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { wrapper, inputLabel, input, iconEl } from "./TextInput.css.ts";
-import Icon from "../Icon/Icon.jsx";
+import Icon from "../Icon";
 
 function TextInput({
   label,

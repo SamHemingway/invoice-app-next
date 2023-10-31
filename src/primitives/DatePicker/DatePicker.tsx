@@ -1,6 +1,6 @@
 import React from "react";
 import { DayPicker, useInput } from "react-day-picker";
-import { ICONS } from "@/assets/ICONS.jsx";
+import { ICONS } from "@/assets/ICONS.tsx";
 import Popover from "@/primitives/Popover";
 import TextInput from "@/primitives/TextInput";
 import "react-day-picker/dist/style.css";

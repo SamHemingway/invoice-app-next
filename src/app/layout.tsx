@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { League_Spartan } from "next/font/google";
 import "@/styles/reset.css.ts";
 import "@/styles/global.css.ts";
@@ -12,7 +13,11 @@ export const metadata = {
   description: "Invoices app created by Sam Hemingway",
 };
 
-export default function RootLayout({ children }) {
+type RootTypes = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootTypes) {
   return (
     <html lang="en">
       <body className={leagueSpartan.className}>

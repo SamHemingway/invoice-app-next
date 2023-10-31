@@ -12,9 +12,9 @@ import {
   quantityColumn,
   priceColumn,
 } from "./LineItems.css.ts";
-import internationaliseCurrency from "@/helpers/internationaliseCurrency.js";
+import internationaliseCurrency from "@/helpers/internationaliseCurrency.ts";
 
-import useMediaQuery from "@/hooks/useMediaQuery.js";
+import useMediaQuery from "@/hooks/useMediaQuery.ts";
 
 function LineItems({ data }) {
   const mobileViewport = useMediaQuery("(max-width: 600px)");

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { wrapper } from "./InvoiceOverview.css.ts";
 import InvoiceStatus from "@/app/components/InvoiceStatus/";
-import InvoiceActionBar from "../InvoiceActionBar";
+import InvoiceActionBar from "../InvoiceActionBar/index.tsx";
 
 function InvoiceOverview({ data }) {
   return (

@@ -8,7 +8,7 @@ import {
 } from "./SectionOverview.css.ts";
 import DropdownButton from "@/app/components/DropdownButton";
 import Button from "@/primitives/Button/Button";
-import useIsViewportLowerThan from "@/hooks/useIsViewportLowerThan.js";
+import useIsViewportLowerThan from "@/hooks/useIsViewportLowerThan.ts";
 import FilterOptions from "@/app/components/FilterOptions";
 
 function SectionOverview() {

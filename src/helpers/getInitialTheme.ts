@@ -1,4 +1,4 @@
-function getInitialTheme() {
+function getInitialTheme(): string {
   const preference = window.localStorage.getItem("theme");
   const hasPersistedPreference = typeof preference === "string";
 

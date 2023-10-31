@@ -1,8 +1,8 @@
 export default function internationaliseCurrency(
-  number,
-  intlCode = "en-GB",
-  currency = "GBP"
-) {
+  number: number,
+  intlCode: string = "en-GB",
+  currency: string = "GBP"
+): string {
   return new Intl.NumberFormat(intlCode, {
     style: "currency",
     currency: currency,

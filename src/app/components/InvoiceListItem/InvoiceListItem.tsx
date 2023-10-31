@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import internationaliseCurrency from "@/helpers/internationaliseCurrency.js";
-import internationaliseDate from "@/helpers/internationaliseDate.js";
+import internationaliseCurrency from "@/helpers/internationaliseCurrency.ts";
+import internationaliseDate from "@/helpers/internationaliseDate.ts";
 import {
   wrapper,
   clientName,

@@ -1,8 +1,8 @@
 import { wrapper } from "./page.css.ts";
 import getInvoice from "@/helpers/getInvoice";
-import NavLink from "./components/NavLink";
-import InvoiceOverview from "./components/InvoiceOverview";
-import InvoiceDetails from "./components/InvoiceDetails";
+import NavLink from "./components/NavLink/index.tsx";
+import InvoiceOverview from "./components/InvoiceOverview/index.tsx";
+import InvoiceDetails from "./components/InvoiceDetails/index.tsx";
 
 export async function generateMetadata({ params }) {
   return {
