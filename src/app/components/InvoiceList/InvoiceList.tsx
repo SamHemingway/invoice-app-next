@@ -11,7 +11,7 @@ function InvoiceList() {
         return (
           <InvoiceListItem
             data={invoice}
-            key={data.id}
+            key={invoice.id}
           />
         );
       })}

@@ -7,10 +7,10 @@ import { ICONS, IconsTypes } from "@/assets/ICONS.tsx";
 type ButtonTypes = {
   variant?: "fill" | "ghost";
   state?: "primary" | "secondary" | "danger";
-  icon: IconsTypes;
+  icon?: IconsTypes;
   iconLocation?: "left" | "right";
   roundIcon?: boolean;
-  children: JSX.Element;
+  children: React.ReactNode;
 };
 
 function Button({

@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 import { wrapper } from "./Popover.css.ts";
 import * as Primitive from "@radix-ui/react-popover";
 
-function Popover({ trigger, label, children }) {
+type PopoverTypes = {
+  trigger: React.ReactNode;
+  label: string;
+  children: React.ReactNode;
+};
+
+function Popover({ trigger, label, children }: PopoverTypes) {
   return (
     <Primitive.Root>
       <Primitive.Anchor>

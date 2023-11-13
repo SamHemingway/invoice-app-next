@@ -1,19 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { wrapper } from "./InvoiceOverview.css.ts";
 import InvoiceStatus from "@/app/components/InvoiceStatus/";
 import InvoiceActionBar from "../InvoiceActionBar/index.tsx";
 
-function InvoiceOverview({ data }) {
+import { InvoiceType } from "@/types/types.ts";
+
+function InvoiceOverview({ data }: { data: InvoiceType }) {
   return (
     <article className={wrapper}>
       <p>Status</p>
       <InvoiceStatus status={data.status} />
-      <InvoiceActionBar invoiceID={data.id} />
+      <InvoiceActionBar id={data.id} />
     </article>
   );
 }
-
-InvoiceOverview.propTypes = {};
 
 export default InvoiceOverview;

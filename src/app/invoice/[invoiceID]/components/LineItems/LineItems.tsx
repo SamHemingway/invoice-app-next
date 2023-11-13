@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import PropTypes from "prop-types";
 import {
   table,
   row,
@@ -16,7 +15,9 @@ import internationaliseCurrency from "@/helpers/internationaliseCurrency.ts";
 
 import useMediaQuery from "@/hooks/useMediaQuery.ts";
 
-function LineItems({ data }) {
+import { InvoiceType } from "@/types/types.ts";
+
+function LineItems({ data }: { data: InvoiceType }) {
   const mobileViewport = useMediaQuery("(max-width: 600px)");
 
   return (
@@ -65,7 +66,7 @@ function LineItems({ data }) {
       <tfoot>
         <tr className={summary}>
           <td
-            colSpan="3"
+            colSpan={3}
             className={amountDue}
           >
             Amount Due
@@ -76,9 +77,5 @@ function LineItems({ data }) {
     </table>
   );
 }
-
-LineItems.propTypes = {
-  data: PropTypes.object.isRequired,
-};
 
 export default LineItems;

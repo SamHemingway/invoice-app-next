@@ -5,7 +5,7 @@ type IconCircleTypes = {
   icon: IconsTypes;
   size: number;
   strokeWidth?: number;
-  style?: any;
+  style?: React.CSSProperties;
 };
 
 function IconCircle({

@@ -1,7 +1,10 @@
 import Icon from "@/primitives/Icon/Icon";
-import PropTypes from "prop-types";
 
-function Logo({ label }) {
+type LogoType = {
+  label: string;
+};
+
+function Logo({ label }: LogoType) {
   return (
     <Icon label={label}>
       <svg
@@ -34,9 +37,5 @@ function Logo({ label }) {
     </Icon>
   );
 }
-
-Logo.propTypes = {
-  label: PropTypes.string.isRequired,
-};
 
 export default Logo;

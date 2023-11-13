@@ -1,5 +1,10 @@
 import React from "react";
-import { DayPicker, useInput } from "react-day-picker";
+import {
+  DayPicker,
+  useInput,
+  DayClickEventHandler,
+  DayPickerSingleProps,
+} from "react-day-picker";
 import { ICONS } from "@/assets/ICONS.tsx";
 import Popover from "@/primitives/Popover";
 import TextInput from "@/primitives/TextInput";
@@ -8,11 +13,23 @@ import { selectedDay, day } from "./DatePicker.css.ts";
 
 const calendarIcon = ICONS.calendar;
 
-function DatePicker({ label, onChange, selected, ...delegated }) {
+type BaseTypes = {
+  label: string;
+  onChange: DayClickEventHandler;
+};
+
+type DatePickerTypes = BaseTypes & DayPickerSingleProps;
+
+function DatePicker({
+  label,
+  onChange,
+  selected,
+  ...delegated
+}: DatePickerTypes) {
   const { inputProps, dayPickerProps } = useInput({
     format: "do MMM yyyy",
     required: true,
-    defaultSelected: new Date(selected),
+    defaultSelected: new Date(),
   });
 
   console.log(delegated);
@@ -53,7 +70,5 @@ function DatePicker({ label, onChange, selected, ...delegated }) {
     </Popover>
   );
 }
-
-DatePicker.propTypes = {};
 
 export default DatePicker;

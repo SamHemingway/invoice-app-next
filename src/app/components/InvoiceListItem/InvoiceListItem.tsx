@@ -12,8 +12,13 @@ import {
 import Link from "next/link.js";
 import InvoiceStatus from "../InvoiceStatus";
 import InvoiceNumber from "../InvoiceNumber";
+import { InvoiceType } from "@/types/types.ts";
 
-function InvoiceListItem({ data }) {
+type InvoiceListItemProps = {
+  data: InvoiceType;
+};
+
+function InvoiceListItem({ data }: InvoiceListItemProps) {
   const totalDue = internationaliseCurrency(data.total);
   const date = internationaliseDate(data.paymentDue);
 

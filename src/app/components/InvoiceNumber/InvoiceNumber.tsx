@@ -1,8 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { wrapper } from "./InvoiceNumber.css.ts";
 
-function InvoiceNumber({ as: Element = "h1", children, ...delegated }) {
+type InvoiceNumberType = {
+  as?: keyof JSX.IntrinsicElements;
+  children: React.ReactNode;
+};
+
+function InvoiceNumber({
+  as: Element = "h1",
+  children,
+  ...delegated
+}: InvoiceNumberType) {
   return (
     <Element
       className={wrapper}
@@ -12,10 +20,5 @@ function InvoiceNumber({ as: Element = "h1", children, ...delegated }) {
     </Element>
   );
 }
-
-InvoiceNumber.propTypes = {
-  as: PropTypes.elementType,
-  children: PropTypes.node.isRequired,
-};
 
 export default InvoiceNumber;

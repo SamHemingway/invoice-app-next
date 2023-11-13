@@ -1,12 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import {
   statusWrapper,
   statusCircle,
   statusCircleWrapper,
 } from "./InvoiceStatus.css.ts";
+import { InvoiceStatusType } from "@/types/types.ts";
 
-export function InvoiceStatus({ status }) {
+export function InvoiceStatus({ status }: { status: InvoiceStatusType }) {
   return (
     <div className={statusWrapper({ status })}>
       <svg
@@ -25,9 +25,4 @@ export function InvoiceStatus({ status }) {
     </div>
   );
 }
-
-InvoiceStatus.propTypes = {
-  status: PropTypes.string.isRequired,
-};
-
 export default InvoiceStatus;

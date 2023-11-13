@@ -7,10 +7,10 @@ import {
   label,
 } from "./FilterOptions.css.ts";
 
-const initialOptions = {
-  Draft: true,
-  Pending: true,
-  Paid: true,
+const initialOptions: Record<string, boolean> = {
+  draft: true,
+  pending: true,
+  paid: true,
 };
 
 function FilterOptions() {
@@ -30,7 +30,7 @@ function FilterOptions() {
             type="checkbox"
             id={option}
             value={option}
-            checked={filters[option] === true}
+            checked={filters[option]}
             onChange={(event) => {
               setFilters({
                 ...filters,

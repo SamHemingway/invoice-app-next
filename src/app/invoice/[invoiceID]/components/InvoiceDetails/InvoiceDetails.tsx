@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import internationaliseDate from "@/helpers/internationaliseDate.ts";
 import LineItems from "../LineItems";
 import InvoiceNumber from "@/app/components/InvoiceNumber";
@@ -13,7 +12,13 @@ import {
   dataSectionWrapper,
 } from "./InvoiceDetails.css.ts";
 
-function InvoiceDetails({ data }) {
+import { InvoiceType } from "@/types/types.ts";
+
+type InvoiceDetailsType = {
+  data: InvoiceType;
+};
+
+function InvoiceDetails({ data }: InvoiceDetailsType) {
   return (
     <article className={wrapper}>
       <div className={mainDetails}>
@@ -55,11 +60,13 @@ function InvoiceDetails({ data }) {
   );
 }
 
-InvoiceDetails.propTypes = {
-  data: PropTypes.object.isRequired,
-};
-
-function DataSection({ title, children }) {
+function DataSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <div>
       <h2 className={dataSectionTitle}>{title}</h2>

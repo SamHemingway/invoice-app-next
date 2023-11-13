@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { wrapper } from "./InvoiceActionBar.css.ts";
 import Button from "@/primitives/Button/";
 import Link from "next/link.js";
-
-function InvoiceActionBar({ invoiceID }) {
+import { InvoiceIDType } from "@/types/types.ts";
+function InvoiceActionBar({ id }: { id: InvoiceIDType }) {
   return (
     <div className={wrapper}>
-      <Link href={`/invoice/${invoiceID}/edit`}>
+      <Link href={`/invoice/${id}/edit`}>
         <Button state="secondary">Edit</Button>
       </Link>
       <Button state="danger">Delete</Button>
@@ -15,9 +14,5 @@ function InvoiceActionBar({ invoiceID }) {
     </div>
   );
 }
-
-InvoiceActionBar.propTypes = {
-  invoiceID: PropTypes.string.isRequired,
-};
 
 export default InvoiceActionBar;
